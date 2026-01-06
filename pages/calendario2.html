@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAM - Calendario 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="./../styles.css" rel="stylesheet" />
+</head>
+<body class="project-page calendar-page">
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20oscuro.png?updatedAt=1759508923355" alt="Logo Claro" class="logo-light">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20claro.png?updatedAt=1759508923395" alt="Logo Oscuro" class="logo-dark">
+            </div>
+            <nav class="navigation">
+                <a class="nav-link" href="./../index.html"><span class="material-symbols-outlined">dashboard</span><span>Inicio</span></a>
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">list_alt</span><span>FixIT</span></a>
+                <a class="nav-link" href="./../pages/gestion.html"><span class="material-symbols-outlined">add_task</span><span>Gestión de Proyectos</span></a>
+                <a class="nav-link" href="./../pages/marketing.html"><span class="material-symbols-outlined">linked_camera</span><span>CAM</span></a>
+            </nav>
+            <div class="sidebar-footer">
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">logout</span><span>Cerrar Sesión</span></a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="project-header">
+                <div class="project-header-main">
+                    <div class="project-logo">
+                        <span class="material-symbols-outlined">add_task</span>
+                        <h2>Gestión de Proyectos</h2>
+                    </div>
+                    <nav class="project-nav">
+                        <a href="./../pages/gestion.html">Dashboard</a>
+                        <a href="./../pages/tareas.html">Tareas</a>
+                        <a href="./../pages/calendario2.html">Calendario</a>
+                        <a href="./../pages/informes.html">Informes</a>
+                    </nav>
+                </div>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="icon-button" title="Alternar tema">
+                        <span class="material-symbols-outlined sun-icon">light_mode</span>
+                        <span class="material-symbols-outlined moon-icon">dark_mode</span>
+                    </button>
+                    <a href="#" class="icon-button" title="Cerrar Sesión">
+                        <span class="material-symbols-outlined">logout</span>
+                    </a>
+                </div>
+            </header>
+            <div class="content-wrapper">
+                <div class="calendar-header-controls">
+                    <div class="calendar-nav">
+                        <button class="icon-button"><span class="material-symbols-outlined">chevron_left</span></button>
+                        <h2 class="calendar-title">Octubre 2025</h2>
+                        <button class="icon-button"><span class="material-symbols-outlined">chevron_right</span></button>
+                        <button class="btn-primary">Hoy</button>
+                    </div>
+                    <div class="calendar-view-toggle">
+                        <button class="btn btn-secondary active">Mes</button>
+                        <button class="btn btn-secondary">Semana</button>
+                        <button class="btn btn-secondary">Día</button>
+                    </div>
+                </div>
+                <div class="calendar-container">
+                    <div class="calendar-grid-header">
+                        <div>Domingo</div><div>Lunes</div><div>Martes</div><div>Miércoles</div><div>Jueves</div><div>Viernes</div><div>Sábado</div>
+                    </div>
+                    <div class="calendar-grid-body">
+                        <div class="day-cell muted">28</div><div class="day-cell muted">29</div><div class="day-cell muted">30</div>
+                        <div class="day-cell"><span>1</span></div><div class="day-cell"><span>2</span></div><div class="day-cell"><span>3</span></div><div class="day-cell"><span>4</span></div>
+                        <div class="day-cell"><span>5</span><div class="event-list"><div class="event-pill event-danger">Nuevo Banner Web</div></div></div>
+                        <div class="day-cell"><span>6</span></div><div class="day-cell"><span>7</span></div><div class="day-cell"><span>8</span></div><div class="day-cell"><span>9</span></div><div class="day-cell"><span>10</span></div><div class="day-cell"><span>11</span></div>
+                        <div class="day-cell"><span>12</span></div><div class="day-cell"><span>13</span></div><div class="day-cell"><span>14</span></div>
+                        <div class="day-cell"><span>15</span><div class="event-list"><div class="event-pill event-pending">Video Resumen Q4</div></div></div>
+                        <div class="day-cell"><span>16</span></div><div class="day-cell"><span>17</span></div><div class="day-cell"><span>18</span></div>
+                        <div class="day-cell"><span>19</span></div>
+                        <div class="day-cell"><span>20</span><div class="event-list"><div class="event-pill event-warning">Stand de Conferencia</div></div></div>
+                        <div class="day-cell"><span>21</span></div><div class="day-cell today"><span>22</span></div><div class="day-cell"><span>23</span></div><div class="day-cell"><span>24</span></div><div class="day-cell"><span>25</span></div>
+                        <div class="day-cell"><span>26</span><div class="event-list"><div class="event-pill event-danger">Lanzamiento de Producto</div></div></div>
+                        <div class="day-cell"><span>27</span></div>
+                        <div class="day-cell"><span>28</span><div class="event-list"><div class="event-pill event-success">Gráficos para Redes</div></div></div>
+                        <div class="day-cell"><span>29</span></div><div class="day-cell"><span>30</span></div><div class="day-cell"><span>31</span></div>
+                        <div class="day-cell muted">1</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="request-modal" class="modal-overlay">
+        </div>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+        const applySavedTheme = () => { const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'dark') { body.classList.add('dark-mode'); } };
+        themeToggleBtn.addEventListener('click', () => { body.classList.toggle('dark-mode'); localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light'); });
+        document.addEventListener('DOMContentLoaded', applySavedTheme);
+    </script>
+</body>
+</html>

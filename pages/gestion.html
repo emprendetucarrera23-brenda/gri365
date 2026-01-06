@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRI365 - Gestión de Proyectos</title>
+    <link rel="stylesheet" href="./../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body class="project-page">
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20oscuro.png?updatedAt=1759508923355" alt="Logo Claro" class="logo-light">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20claro.png?updatedAt=1759508923395" alt="Logo Oscuro" class="logo-dark">
+            </div>
+            <nav class="navigation">
+                <a class="nav-link" href="./../index.html"><span class="material-symbols-outlined">dashboard</span><span>Inicio</span></a>
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">list_alt</span><span>FixIT</span></a>
+                <a class="nav-link active" href="./../pages/gestion.html"><span class="material-symbols-outlined">add_task</span><span>Gestión de Proyectos</span></a>
+                <a class="nav-link" href="./../pages/marketing.html"><span class="material-symbols-outlined">linked_camera</span><span>CAM</span></a>
+            </nav>
+            <div class="sidebar-footer">
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">logout</span><span>Cerrar Sesión</span></a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="project-header">
+                <div class="project-header-main">
+                    <div class="project-logo">
+                        <span class="material-symbols-outlined">add_task</span>
+                        <h2>Gestión de Proyectos</h2>
+                    </div>
+                    <nav class="project-nav">
+                        <a href="gestion.html">Dashboard</a>
+                        <a href="tareas.html">Tareas</a>
+                        <a href="calendario2.html">Calendario</a>
+                        <a href="informes.html">Informes</a>
+                    </nav>
+                </div>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="icon-button" title="Alternar tema">
+                        <span class="material-symbols-outlined sun-icon">light_mode</span>
+                        <span class="material-symbols-outlined moon-icon">dark_mode</span>
+                    </button>
+                    <a href="#" class="icon-button" title="Cerrar Sesión">
+                        <span class="material-symbols-outlined">logout</span>
+                    </a>
+                </div>
+            </header>
+            <main class="project-main-content">
+                <div class="project-content-header">
+                    <div>
+                        <p class="project-title">Panel de Proyectos</p>
+                        <p class="project-subtitle">Una vista general de todos tus proyectos.</p>
+                    </div>
+                    <button class="btn btn-primary create-project-btn" id="open-create-project-modal">
+                        <span class="material-symbols-outlined">add</span>
+                        <span>Crear Nuevo Proyecto</span>
+                    </button>
+                </div>
+                <div class="project-filters">
+                    <div class="search-bar">
+                        <span class="material-symbols-outlined">search</span>
+                        <input type="text" placeholder="Buscar proyectos...">
+                    </div>
+                    <div class="filter-tabs">
+                        <button class="filter-tab active">Todos</button>
+                        <button class="filter-tab">Activo</button>
+                        <button class="filter-tab">Completado</button>
+                        <button class="filter-tab">En pausa</button>
+                    </div>
+                </div>
+                <div class="project-grid">
+                    <div class="project-card" data-project-id="1">
+                        <div class="card-header"><h3>Campaña de Marketing Q3</h3><span class="badge status-active">Activo</span></div>
+                        <div class="progress-section">
+                            <div class="progress-info"><span class="progress-label">Progreso</span><span class="progress-percent">65%</span></div>
+                            <div class="progress-bar-wrapper"><div class="progress-bar" style="width: 65%;"></div></div>
+                        </div>
+                        <div class="card-meta">
+                            <div><span class="meta-label">Vencimiento</span><span>15 Oct, 2024</span></div>
+                            <div class="meta-right"><span class="meta-label">Tareas</span><span>8 pendientes</span></div>
+                        </div>
+                        <div class="card-team">
+                            <span class="meta-label">Equipo</span>
+                            <div class="avatar-group">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM.jpeg?updatedAt=1754335165819" alt="Avatar">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM%20(4).jpeg?updatedAt=1754335165735" alt="Avatar">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.10%20PM.jpeg?updatedAt=1754335165679" alt="Avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project-id="2">
+                        <div class="card-header"><h3>Rediseño del Sitio Web</h3><span class="badge status-completed">Completado</span></div>
+                        <div class="progress-section">
+                            <div class="progress-info"><span class="progress-label">Progreso</span><span class="progress-percent">100%</span></div>
+                            <div class="progress-bar-wrapper"><div class="progress-bar" style="width: 100%;"></div></div>
+                        </div>
+                        <div class="card-meta">
+                            <div><span class="meta-label">Vencimiento</span><span>20 Sep, 2024</span></div>
+                            <div class="meta-right"><span class="meta-label">Tareas</span><span>0 pendientes</span></div>
+                        </div>
+                        <div class="card-team">
+                            <span class="meta-label">Equipo</span>
+                            <div class="avatar-group">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-04%20at%203.59.32%20PM.jpeg?updatedAt=1754414061643" alt="Avatar">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM.jpeg?updatedAt=1754335165819" alt="Avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project-id="3">
+                        <div class="card-header"><h3>Integración API</h3><span class="badge status-paused">En pausa</span></div>
+                        <div class="progress-section">
+                            <div class="progress-info"><span class="progress-label">Progreso</span><span class="progress-percent">20%</span></div>
+                            <div class="progress-bar-wrapper"><div class="progress-bar" style="width: 20%;"></div></div>
+                        </div>
+                        <div class="card-meta">
+                            <div><span class="meta-label">Vencimiento</span><span>30 Nov, 2024</span></div>
+                            <div class="meta-right"><span class="meta-label">Tareas</span><span>15 pendientes</span></div>
+                        </div>
+                        <div class="card-team">
+                            <span class="meta-label">Equipo</span>
+                            <div class="avatar-group">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.10%20PM.jpeg?updatedAt=1754335165679" alt="Avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project-id="4">
+                        <div class="card-header"><h3>Desarrollo App Móvil</h3><span class="badge status-late">Atrasado</span></div>
+                        <div class="progress-section">
+                            <div class="progress-info"><span class="progress-label">Progreso</span><span class="progress-percent">80%</span></div>
+                            <div class="progress-bar-wrapper"><div class="progress-bar" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="card-meta">
+                            <div><span class="meta-label due-date-late">Vencimiento</span><span class="due-date-late">01 Sep, 2024</span></div>
+                            <div class="meta-right"><span class="meta-label">Tareas</span><span>3 pendientes</span></div>
+                        </div>
+                        <div class="card-team">
+                            <span class="meta-label">Equipo</span>
+                            <div class="avatar-group">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM.jpeg?updatedAt=1754335165819" alt="Avatar">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM%20(4).jpeg?updatedAt=1754335165735" alt="Avatar">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.10%20PM.jpeg?updatedAt=1754335165679" alt="Avatar">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-04%20at%203.59.32%20PM.jpeg?updatedAt=1754414061643" alt="Avatar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </main>
+    </div>
+
+    <div id="project-details-modal" class="modal-overlay">
+        <div class="modal-content project-details-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Diseño de la nueva landing page</h2>
+                <button class="modal-close-btn"><span class="material-symbols-outlined">close</span></button>
+            </div>
+            <div class="modal-body">
+                 <div class="project-details-grid">
+                    <div class="project-info-column">
+                        <div class="project-meta-header">
+                            <div>
+                                <p class="project-meta-subtitle">Proyecto Titán</p>
+                            </div>
+                            <div class="project-meta-actions">
+                                <button class="btn btn-secondary">Editar Proyecto</button>
+                                <button class="btn btn-success"><span class="material-symbols-outlined">check_circle</span> Completada</button>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag tag-yellow">En progreso</span>
+                            <span class="tag tag-red">Prioridad Alta</span>
+                            <span class="tag tag-indigo">UI/UX</span>
+                        </div>
+                        <div class="project-assign-info">
+                            <div class="assign-item">
+                                <p class="assign-label">Asignado a</p>
+                                <div class="user-chip"><img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM.jpeg?updatedAt=1754335165819" alt="Avatar"> Ana García</div>
+                            </div>
+                            <div class="assign-item">
+                                <p class="assign-label">Fecha de Vencimiento</p>
+                                <p>25 de Diciembre, 2023</p>
+                            </div>
+                        </div>
+                        <div class="project-description-section">
+                          
+                             <div class="canvas-actions">
+                                <button class="icon-btn-small"><span class="material-symbols-outlined">edit</span></button>
+                                
+                                <button class="icon-btn-small"><span class="material-symbols-outlined">note_add</span></button>
+                             </div>
+                             <div class="description-content">
+                                <h3>Descripción</h3>
+                                <p>Crear un diseño moderno y atractivo para la nueva página de inicio, siguiendo las directrices de la marca. La página debe ser responsive y estar optimizada para la conversión. Incluir secciones para características, testimonios y un formulario de contacto.</p>
+                             </div>
+                             <div class="attachments-content">
+                                <h3>Archivos Adjuntos</h3>
+                                <div class="attachments-grid">
+                                    <div class="attachment-card">
+                                        <span class="material-symbols-outlined">image</span>
+                                        <p>wireframe_v1.png</p>
+                                        <a href="#">Descargar</a>
+                                    </div>
+                                    <div class="attachment-card">
+                                        <span class="material-symbols-outlined">description</span>
+                                        <p>brief_proyecto.pdf</p>
+                                        <a href="#">Descargar</a>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="project-comments-column">
+                        <h3>Comentarios en Tiempo Real</h3>
+                        <div class="comments-list">
+                            <div class="comment-item right">
+                                <div class="comment-bubble">
+                                    <div class="comment-header"><span class="comment-author">Carlos Sánchez</span><span class="comment-time">Hace 2 horas</span></div>
+                                    <p>¿Podemos revisar la paleta de colores? Creo que un tono más vibrante podría funcionar mejor para el CTA principal.</p>
+                                </div>
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.10%20PM.jpeg?updatedAt=1754335165679" alt="Avatar" class="comment-avatar">
+                            </div>
+                            <div class="comment-item left">
+                                <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-04%20at%203.59.32%20PM.jpeg?updatedAt=1754414061643" alt="Avatar" class="comment-avatar">
+                                <div class="comment-bubble">
+                                    <div class="comment-header"><span class="comment-author">Ana García</span><span class="comment-time">Hace 1 hora</span></div>
+                                    <p>Buena idea, Carlos. He adjuntado un nuevo moodboard con algunas alternativas. Échale un vistazo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-input-area">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocLFXLCR-3-f-2k9_3Y-7E_M9Q-s7c8B-u-P-wH3Q-i-wQ=s96-c-rg-br100" alt="Avatar" class="comment-avatar-small">
+                            <textarea placeholder="Escribe un comentario..."></textarea>
+                            <button class="btn btn-primary">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="create-project-modal" class="modal-overlay">
+        <div class="modal-content creation-modal-content">
+            <div id="modal-step-1" class="modal-view">
+                <div class="creation-modal-header">
+                    <div>
+                        <p class="creation-modal-title">Crear Nuevo Proyecto</p>
+                        <p class="creation-modal-subtitle">Rellene los siguientes datos para crear un nuevo proyecto.</p>
+                    </div>
+                    <button class="modal-close-btn"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="creation-modal-body">
+                    <div class="progress-stepper">
+                        <div class="step active"><div class="step-circle">1</div><p>Información Básica</p></div>
+                        <div class="step-line"></div>
+                        <div class="step"><div class="step-circle">2</div><p>Equipo y Roles</p></div>
+                        <div class="step-line"></div>
+                        <div class="step"><div class="step-circle">3</div><p>Presupuesto</p></div>
+                        <div class="step-line"></div>
+                        <div class="step"><div class="step-circle">4</div><p>Hitos</p></div>
+                    </div>
+                    <div class="form-section">
+                        <div class="form-group"><label for="project-name" class="form-label">Nombre del proyecto</label><input type="text" id="project-name" class="modal-input" placeholder="Introduzca el nombre del proyecto"></div>
+                        <div class="form-group"><label for="description" class="form-label">Descripción (opcional)</label><textarea id="description" class="modal-textarea" placeholder="Introduzca una breve descripción del proyecto" rows="4"></textarea></div>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="start-date" class="form-label">Fecha de inicio</label><div class="date-input-wrapper"><input type="text" id="start-date" class="modal-input" placeholder="Seleccionar fecha"><span class="material-symbols-outlined">calendar_today</span></div></div>
+                            <div class="form-group"><label for="end-date" class="form-label">Fecha de finalización</label><div class="date-input-wrapper"><input type="text" id="end-date" class="modal-input" placeholder="Seleccionar fecha"><span class="material-symbols-outlined">calendar_today</span></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="creation-modal-footer">
+                    <button class="btn btn-secondary back-btn" disabled><span class="material-symbols-outlined">arrow_back</span><span>Atrás</span></button>
+                    <button class="btn btn-primary next-btn"><span>Siguiente</span><span class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
+            </div>
+
+            <div id="modal-step-2" class="modal-view hidden">
+                <div class="creation-modal-header">
+                    <div>
+                        <p class="creation-modal-title">Crear Nuevo Proyecto</p>
+                        <p class="creation-modal-subtitle">Asigna roles y miembros a tu equipo.</p>
+                    </div>
+                    <button class="modal-close-btn"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="creation-modal-body">
+                    <div class="progress-stepper">
+                        <div class="step complete"><div class="step-circle">1</div></div><div class="step-line"></div>
+                        <div class="step active"><div class="step-circle">2</div><p>Equipo y Roles</p></div>
+                        <div class="step-line"></div>
+                        <div class="step"><div class="step-circle">3</div><p>Presupuesto</p></div>
+                        <div class="step-line"></div>
+                        <div class="step"><div class="step-circle">4</div><p>Hitos</p></div>
+                    </div>
+                    <div class="team-builder-grid">
+                        <div class="roles-panel">
+                            <p class="roles-title">Roles Disponibles</p>
+                            <div class="roles-list">
+                                <div class="role-card"><span class="material-symbols-outlined">group</span><div><p>Gerente de Proyecto</p><span>Lidera la planificación.</span></div></div>
+                                <div class="role-card"><span class="material-symbols-outlined">design_services</span><div><p>Diseñador UX/UI</p><span>Define la experiencia.</span></div></div>
+                                <div class="role-card"><span class="material-symbols-outlined">code</span><div><p>Desarrollador Frontend</p><span>Implementa la interfaz.</span></div></div>
+                                <div class="role-card"><span class="material-symbols-outlined">cloud</span><div><p>Desarrollador Backend</p><span>Construye la lógica.</span></div></div>
+                                <div class="role-card"><span class="material-symbols-outlined">bug_report</span><div><p>Tester QA</p><span>Asegura la calidad.</span></div></div>
+                            </div>
+                        </div>
+                        <div class="team-canvas">
+                            <p class="roles-title">Estructura del Equipo</p>
+                            <div class="canvas-dropzone">
+                                <p>Arrastra y suelta roles aquí para empezar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="creation-modal-footer">
+                    <button class="btn btn-secondary back-btn"><span class="material-symbols-outlined">arrow_back</span><span>Atrás</span></button>
+                    <button class="btn btn-primary next-btn"><span>Siguiente</span><span class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
+            </div>
+            
+            <div id="modal-step-3" class="modal-view hidden">
+                <div class="creation-modal-header">
+                    <p class="creation-modal-title">Paso 3: Presupuesto</p>
+                    <button class="modal-close-btn"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="creation-modal-body">
+                    <p>Contenido del paso de Presupuesto aquí...</p>
+                </div>
+                <div class="creation-modal-footer">
+                    <button class="btn btn-secondary back-btn"><span class="material-symbols-outlined">arrow_back</span><span>Atrás</span></button>
+                    <button class="btn btn-primary next-btn"><span>Siguiente</span><span class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
+            </div>
+
+            <div id="modal-step-4" class="modal-view hidden">
+                 <div class="creation-modal-header">
+                    <p class="creation-modal-title">Paso 4: Hitos</p>
+                    <button class="modal-close-btn"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="creation-modal-body">
+                    <p>Contenido del paso de Hitos aquí...</p>
+                </div>
+                <div class="creation-modal-footer">
+                    <button class="btn btn-secondary back-btn"><span class="material-symbols-outlined">arrow_back</span><span>Atrás</span></button>
+                    <button class="btn btn-primary" id="send-request">Crear Proyecto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+          <div id="toast" class="toast-overlay">
+        <div class="toast-message">
+            <button class="close-toast"><span class="material-symbols-outlined">close</span></button>
+            <div class="icon"><span class="material-symbols-outlined">check_circle</span></div>
+            <h3>Proyecto Creado con Éxito</h3>
+            <p>Tu nuevo proyecto ha sido registrado correctamente.</p>
+        </div>
+    </div>
+    
+        <script>
+        // ===== SCRIPT DE TEMA =====
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+        const applySavedTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        };
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+        document.addEventListener('DOMContentLoaded', applySavedTheme);
+
+        // ===== SCRIPT PARA MODALES Y TOAST (Lógica principal del Toast) =====
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Lógica para el Modal de Detalles del Proyecto ---
+            const detailsModal = document.getElementById('project-details-modal');
+            if (detailsModal) {
+                const closeDetailsBtn = detailsModal.querySelector('.modal-close-btn');
+                const projectCards = document.querySelectorAll('.project-card');
+
+                projectCards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        detailsModal.classList.add('active');
+                    });
+                });
+
+                closeDetailsBtn.addEventListener('click', () => {
+                    detailsModal.classList.remove('active');
+                });
+
+                detailsModal.addEventListener('click', (e) => {
+                    if (e.target === detailsModal) {
+                        detailsModal.classList.remove('active');
+                    }
+                });
+            }
+
+            // --- Lógica para el Modal de Creación de Proyecto ---
+            const createModal = document.getElementById('create-project-modal');
+            if (createModal) {
+                const openCreateBtn = document.getElementById('open-create-project-modal');
+                const closeCreateBtns = createModal.querySelectorAll('.modal-close-btn');
+                
+                const steps = createModal.querySelectorAll('.modal-view');
+                const nextBtns = createModal.querySelectorAll('.next-btn');
+                const backBtns = createModal.querySelectorAll('.back-btn');
+                const sendBtn = createModal.querySelector('#send-request'); // Busca el botón con el ID CORREGIDO
+                
+                const toast = document.getElementById("toast");
+                const closeToast = document.querySelector(".close-toast");
+
+                let currentStep = 0;
+
+                const showStep = (stepIndex) => {
+                    steps.forEach((step, index) => {
+                        step.classList.toggle('hidden', index !== stepIndex);
+                    });
+                    // Habilitar/deshabilitar botón "Atrás"
+                    backBtns.forEach(btn => {
+                        const parentStep = btn.closest('.modal-view');
+                        if (parentStep === steps[0]) {
+                            btn.disabled = true;
+                        } else {
+                            btn.disabled = false;
+                        }
+                    });
+                };
+
+                const openModal = () => {
+                    currentStep = 0;
+                    showStep(currentStep);
+                    createModal.classList.add('active');
+                };
+
+                const closeModal = () => {
+                    createModal.classList.remove('active');
+                };
+
+                openCreateBtn.addEventListener('click', openModal);
+                closeCreateBtns.forEach(btn => btn.addEventListener('click', closeModal));
+                createModal.addEventListener('click', (e) => { if (e.target === createModal) closeModal(); });
+
+                nextBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        if (currentStep < steps.length - 1) {
+                            currentStep++;
+                            showStep(currentStep);
+                        }
+                    });
+                });
+
+                backBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        if (currentStep > 0) {
+                            currentStep--;
+                            showStep(currentStep);
+                        }
+                    });
+                });
+
+                // Lógica de activación del Toast al hacer click en el botón final
+                if (sendBtn) {
+                    sendBtn.addEventListener('click', () => {
+                        closeModal();
+                        if (toast) {
+                            toast.style.display = "flex"; // Muestra el toast
+                        }
+                    });
+                }
+
+                if (closeToast) {
+                    closeToast.addEventListener('click', () => {
+                        // Inicia la animación de salida
+                        toast.querySelector(".toast-message").style.animation = "fadeOut 0.4s forwards";
+                        setTimeout(() => {
+                            // Oculta completamente el overlay
+                            toast.style.display = "none";
+                            // Resetea la animación para la próxima vez
+                            toast.querySelector(".toast-message").style.animation = "fadeIn 0.4s forwards";
+                        }, 400);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

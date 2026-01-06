@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRI365 - Tareas</title>
+    <link rel="stylesheet" href="./../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body class="project-page tasks-page">
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20oscuro.png?updatedAt=1759508923355" alt="Logo Claro" class="logo-light">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20claro.png?updatedAt=1759508923395" alt="Logo Oscuro" class="logo-dark">
+            </div>
+            <nav class="navigation">
+                <a class="nav-link" href="./../index.html"><span class="material-symbols-outlined">dashboard</span><span>Inicio</span></a>
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">list_alt</span><span>FixIT</span></a>
+                <a class="nav-link active" href="./../pages/gestion.html"><span class="material-symbols-outlined">add_task</span><span>Gestión de Proyectos</span></a>
+                <a class="nav-link" href="./../pages/marketing.html"><span class="material-symbols-outlined">linked_camera</span><span>CAM</span></a>
+            </nav>
+            <div class="sidebar-footer">
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">logout</span><span>Cerrar Sesión</span></a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="project-header">
+                <div class="project-header-main">
+                    <div class="project-logo">
+                        <span class="material-symbols-outlined">add_task</span>
+                        <h2>Gestión de Proyectos</h2>
+                    </div>
+                    <nav class="project-nav">
+                        <a href="./../pages/gestion.html">Dashboard</a>
+                        <a href="./../pages/tareas.html" class="active">Tareas</a>
+                        <a href="./../pages/calendario2.html">Calendario</a>
+                        <a href="./../pages/informes.html">Informes</a>
+                    </nav>
+                </div>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="icon-button" title="Alternar tema">
+                        <span class="material-symbols-outlined sun-icon">light_mode</span>
+                        <span class="material-symbols-outlined moon-icon">dark_mode</span>
+                    </button>
+                    <a href="#" class="icon-button" title="Cerrar Sesión">
+                        <span class="material-symbols-outlined">logout</span>
+                    </a>
+                </div>
+            </header>
+            <main class="tasks-main-content">
+                <div class="tasks-content-header">
+                    <div>
+                        <p class="tasks-title">Tareas de la Campaña</p>
+                        <p class="tasks-subtitle">Una lista de tareas a completar para la campaña.</p>
+                    </div>
+                    <button id="open-task-modal-btn" class="btn-primary create-task-btn">
+                        <span class="material-symbols-outlined">add</span>
+                        <span>Nueva Tarea</span>
+                    </button>
+                </div>
+                
+                <div class="tasks-filters">
+                    <button class="filter-tab active"><span>Estado</span><span class="material-symbols-outlined">arrow_drop_down</span></button>
+                    <button class="filter-tab"><span>Asignado</span><span class="material-symbols-outlined">arrow_drop_down</span></button>
+                    <button class="filter-tab"><span>Fecha de Vencimiento</span><span class="material-symbols-outlined">arrow_drop_down</span></button>
+                    <button class="filter-tab sort-btn"><span class="material-symbols-outlined">filter_list</span><span>Ordenar</span></button>
+                </div>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre de la Tarea</th><th>Asignado</th><th>Fecha de Vencimiento</th><th>Prioridad</th><th>Estado</th><th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Desarrollar nuevo anuncio creativo</td>
+                                <td><div class="user-chip"><img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM.jpeg?updatedAt=1754335165819" alt="Avatar"> Alice</div></td>
+                                <td>2025-10-26</td>
+                                <td><span class="badge status-high">Alta</span></td>
+                                <td><span class="badge status-progress">En Progreso</span></td>
+                                <td><a href="#" class="action-link">Editar</a></td>
+                            </tr>
+                            <tr>
+                                <td>Escribir publicación de blog</td>
+                                <td><div class="user-chip"><img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM%20(4).jpeg?updatedAt=1754335165735" alt="Avatar"> Bob</div></td>
+                                <td>2025-10-28</td>
+                                <td><span class="badge status-medium">Media</span></td>
+                                <td><span class="badge status-todo">Por Hacer</span></td>
+                                <td><a href="#" class="action-link">Editar</a></td>
+                            </tr>
+                            <tr>
+                                <td>Programar publicaciones en redes sociales</td>
+                                <td><div class="user-chip"><img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.10%20PM.jpeg?updatedAt=1754335165679" alt="Avatar"> Charlie</div></td>
+                                <td>2025-10-30</td>
+                                <td><span class="badge status-low">Baja</span></td>
+                                <td><span class="badge status-todo">Por Hacer</span></td>
+                                <td><a href="#" class="action-link">Editar</a></td>
+                            </tr>
+                            <tr>
+                                <td>Revisar y aprobar el diseño</td>
+                                <td><div class="user-chip"><img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-04%20at%203.59.32%20PM.jpeg?updatedAt=1754414061643" alt="Avatar"> David</div></td>
+                                <td>2025-11-01</td>
+                                <td><span class="badge status-high">Alta</span></td>
+                                <td><span class="badge status-completed">Completado</span></td>
+                                <td><a href="#" class="action-link">Editar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </main>
+    </div>
+
+    <div id="new-task-modal" class="modal-overlay">
+        <div class="modal-content task-modal">
+            <div class="modal-header">
+                <div>
+                    <h2 class="modal-title">Crear Nueva Tarea</h2>
+                    <p class="modal-subtitle">Rellena los campos para crear una nueva tarea.</p>
+                </div>
+                <button id="close-task-modal-btn" class="icon-button"><span class="material-symbols-outlined">close</span></button>
+            </div>
+            <div class="modal-body">
+                <form id="task-form" class="modal-form">
+                    <div class="form-group">
+                        <label for="task-name" class="form-label">Nombre de la tarea</label>
+                        <input id="task-name" type="text" class="modal-input" placeholder="p.ej., Diseñar la nueva página de inicio">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-description" class="form-label">Descripción</label>
+                        <textarea id="task-description" class="modal-textarea" placeholder="Añade una descripción más detallada..."></textarea>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="due-date" class="form-label">Fecha de vencimiento</label>
+                            <div class="input-with-icon">
+                                <input id="due-date" type="text" class="modal-input" placeholder="Selecciona una fecha">
+                                <span class="material-symbols-outlined">calendar_today</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="assign-to" class="form-label">Asignar a</label>
+                            <div class="input-with-icon">
+                                <select id="assign-to" class="modal-input">
+                                    <option disabled selected value="">Seleccionar miembros</option>
+                                    <option value="user1">Ana García</option>
+                                    <option value="user2">Carlos Rodriguez</option>
+                                    <option value="user3">Sofía Martinez</option>
+                                </select>
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </div>
+                            <div class="assigned-users-list">
+                                <div class="assigned-user-chip"><span>Ana G.</span><button type="button"><span class="material-symbols-outlined">close</span></button></div>
+                                <div class="assigned-user-chip"><span>Carlos R.</span><button type="button"><span class="material-symbols-outlined">close</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-secondary" id="cancel-task-modal-btn">Cancelar</button>
+                        <button type="submit" class="btn-primary" id="submit-task-btn">Crear Tarea</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="success-modal" class="modal-overlay success-modal">
+        <div class="modal-content">
+            <span class="material-symbols-outlined success-icon">check_circle</span>
+            <h2 class="modal-title">¡Tarea Creada!</h2>
+            <p class="modal-subtitle">Tu nueva tarea ha sido agregada exitosamente.</p>
+            <button id="close-success-modal-btn" type="button" class="btn-primary">Entendido</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Script de Tema
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const body = document.body;
+            const applySavedTheme = () => { const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'dark') { body.classList.add('dark-mode'); } };
+            
+            themeToggleBtn.addEventListener('click', () => { body.classList.toggle('dark-mode'); localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light'); });
+            applySavedTheme();
+
+            // Referencias a los modales
+            const taskModal = document.getElementById('new-task-modal');
+            const openTaskModalBtn = document.getElementById('open-task-modal-btn');
+            const closeTaskModalBtn = document.getElementById('close-task-modal-btn');
+            const taskForm = document.getElementById('task-form');
+            
+            // Referencias al modal de Éxito
+            const successModal = document.getElementById('success-modal');
+            const closeSuccessModalBtn = document.getElementById('close-success-modal-btn');
+            const cancelTaskModalBtn = document.getElementById('cancel-task-modal-btn');
+
+            // Funciones para abrir/cerrar los modales
+            const openTaskModal = () => taskModal.classList.add('active');
+            const closeTaskModal = () => taskModal.classList.remove('active');
+            
+            const openSuccessModal = () => successModal.classList.add('active');
+            const closeSuccessModal = () => successModal.classList.remove('active');
+
+            // Event Listeners para el modal de Creación de Tarea
+            if (openTaskModalBtn) openTaskModalBtn.addEventListener('click', openTaskModal);
+            if (closeTaskModalBtn) closeTaskModalBtn.addEventListener('click', closeTaskModal);
+            if (cancelTaskModalBtn) cancelTaskModalBtn.addEventListener('click', closeTaskModal);
+
+            // Simulación de envío de formulario
+            if (taskForm) {
+                taskForm.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Detiene el envío real del formulario
+                    
+                    // 1. Cierra el modal de creación
+                    closeTaskModal();
+                    
+                    // 2. Abre el modal de éxito
+                    openSuccessModal();
+                    
+                    // Opcional: Limpiar el formulario después del envío
+                    taskForm.reset();
+                });
+            }
+
+            // Event Listeners para el modal de Éxito
+            if (closeSuccessModalBtn) closeSuccessModalBtn.addEventListener('click', closeSuccessModal);
+
+            // Cerrar modales si se hace clic fuera del contenido
+            if (taskModal) {
+                taskModal.addEventListener('click', (event) => {
+                    if (event.target === taskModal) {
+                        closeTaskModal();
+                    }
+                });
+            }
+            if (successModal) {
+                successModal.addEventListener('click', (event) => {
+                    if (event.target === successModal) {
+                        closeSuccessModal();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

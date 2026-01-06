@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAM - Tickets Resueltos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="./../styles.css" rel="stylesheet" />
+</head>
+<body class="marketing-page reports-page">
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20oscuro.png?updatedAt=1759508923355" alt="Logo Claro" class="logo-light">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20claro.png?updatedAt=1759508923395" alt="Logo Oscuro" class="logo-dark">
+            </div>
+            <nav class="navigation">
+                <a class="nav-link" href="./../index.html"><span class="material-symbols-outlined">dashboard</span><span>Inicio</span></a>
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">list_alt</span><span>FixIT</span></a>
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">inbox</span><span>Gestión de Proyectos</span></a>
+                <a class="nav-link" href="marketing.html"><span class="material-symbols-outlined">linked_camera</span><span>CAM</span></a>
+            </nav>
+            <div class="sidebar-footer">
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">logout</span><span>Cerrar Sesión</span></a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <div class="logo">
+                        <div class="logo-icon-wrapper"><span class="material-symbols-outlined">linked_camera</span></div>
+                        <h1>CAM</h1>
+                    </div>
+                    <nav class="main-nav">
+                        <a href="./../pages/marketing.html" class="nav-link"><span class="material-symbols-outlined">dashboard</span><span>Tickets</span></a>
+                        <a href="./../pages/calendario.html" class="nav-link"><span class="material-symbols-outlined">calendar_today</span><span>Calendario</span></a>
+                        <a href="./../pages/tickets_resueltos.html" class="nav-link active"><span class="material-symbols-outlined">bar_chart</span><span>Tickets Resueltos</span></a>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <button class="btn-icon" id="theme-toggle-btn" title="Alternar tema">
+                        <span class="material-symbols-outlined sun-icon">light_mode</span>
+                        <span class="material-symbols-outlined moon-icon">dark_mode</span>
+                    </button>
+                    <a href="#" class="btn-icon" title="Cerrar Sesión"><span class="material-symbols-outlined">logout</span></a>
+                </div>
+            </header>
+            <div class="reports-content-grid">
+                <aside class="reports-sidebar" id="reports-summary-list">
+                    <div class="reports-tabs">
+                        <button class="reports-tab-btn active" data-tab="summary">Resumen</button>
+                        <button class="reports-tab-btn" data-tab="tickets">Tickets</button>
+                    </div>
+                    <div class="reports-tab-content" id="summary-content">
+                        <div class="summary-card">
+                            <div class="summary-card-icon icon-star">
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <p class="summary-card-title">Total de Tareas Completadas</p>
+                            <p class="summary-card-value">1,234</p>
+                            <p class="summary-card-subtitle">¡Sigue con el buen trabajo!</p>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-card-icon icon-achievements">
+                                <span class="material-symbols-outlined">workspace_premium</span>
+                            </div>
+                            <p class="summary-card-title">Logros por Categoría</p>
+                            <p class="achievement-item"><span class="material-symbols-outlined icon-video">trophy</span> Video: 789</p>
+                            <p class="achievement-item"><span class="material-symbols-outlined icon-post">trophy</span> Post: 445</p>
+                            <p class="achievement-item"><span class="material-symbols-outlined icon-fotografia">trophy</span> Fotografía: 226</p>
+                            <p class="achievement-item"><span class="material-symbols-outlined icon-asesoria_pauta">trophy</span> Asesoria Pauta: 123</p>
+                            <p class="achievement-item"><span class="material-symbols-outlined icon-otro">trophy</span> Otro: 17</p>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-card-icon icon-sprint">
+                                <span class="material-symbols-outlined">timer</span>
+                            </div>
+                            <p class="summary-card-title">Resolución Más Rápida</p>
+                            <p class="summary-card-value">2.5 días</p>
+                            <p class="summary-card-subtitle">¡Estableciendo nuevos récords!</p>
+                        </div>
+                    </div>
+                    <div class="reports-tab-content hidden" id="tickets-content">
+                        <p class="p-4 text-muted">La lista de tickets aún no está implementada.</p>
+                    </div>
+                </aside>
+                <div class="reports-main-content">
+                    <div class="ticket-details-header">
+                        <div>
+                            <h2 class="ticket-details-title">Detalles de la Tarea</h2>
+                            <p class="ticket-details-id">#MK-2024-078</p>
+                        </div>
+                        <div class="ticket-actions">
+                            <button class="btn btn-secondary"><span class="material-symbols-outlined">ios_share</span> Compartir</button>
+                            <button class="btn btn-secondary"><span class="material-symbols-outlined">refresh</span> Re-Solicitar</button>
+                        </div>
+                    </div>
+                    <div class="ticket-details-body">
+                        <div class="ticket-section">
+                            <h3>Información del Solicitante</h3>
+                            <p><strong>Nombre:</strong> Alice Johnson</p>
+                            <p><strong>Departamento:</strong> Marketing</p>
+                        </div>
+                        <div class="ticket-section">
+                            <h3>El Desafío</h3>
+                            <p>Necesitamos un set de gráficos para nuestra nueva campaña de redes sociales que se lanza el próximo mes. La campaña se llama "Summer Splash" y necesitamos recursos para Instagram (post, historia), Facebook (post, portada) y Twitter (post). El estilo debe ser vibrante, enérgico y alineado con nuestra paleta de colores de verano.</p>
+                        </div>
+                        <div class="ticket-section">
+                            <h3>¡Victoria Lograda!</h3>
+                            <div class="victory-box">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                <div>
+                                    <p>Todos los gráficos solicitados fueron creados y entregados en la carpeta compartida. Los archivos incluyen los archivos fuente (PSD) y las exportaciones optimizadas para la web (JPG, PNG). El concepto de diseño fue aprobado por el líder de marketing antes de la finalización.</p>
+                                    <p class="completion-meta">Tarea completada por John Doe el 20 de Julio, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket-section timeline-section">
+                            <h3>Línea de Tiempo de la Tarea</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-icon icon-success"><span class="material-symbols-outlined">celebration</span></div>
+                                    <p class="timeline-title">¡Tarea Completada!</p>
+                                    <p class="timeline-date">Julio 20, 2024 - Gráficos de "Summer Splash" entregados.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-icon icon-design"><span class="material-symbols-outlined">design_services</span></div>
+                                    <p class="timeline-title">Fase Creativa Activa</p>
+                                    <p class="timeline-date">Julio 18, 2024 - Se inició el trabajo de diseño.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-icon icon-new"><span class="material-symbols-outlined">help</span></div>
+                                    <p class="timeline-title">Nueva Tarea Aceptada</p>
+                                    <p class="timeline-date">Julio 17, 2024 - Desafío para los gráficos de "Summer Splash" recibido.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="request-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Nueva Solicitud de Marketing y Comunicación</h2>
+                <button id="close-modal-btn" class="modal-close-btn"><span class="material-symbols-outlined">close</span></button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form">
+                    <div class="modal-form-grid">
+                        <div class="form-group"><label class="form-label" for="material-type">Tipo de Material *</label><select id="material-type" class="modal-input"><option value="video">Video</option><option value="post">Post</option><option value="fotografia">Fotografía</option><option value="asesoria">Asesoría</option><option value="licitacion">Licitación</option><option value="otro">Otro</option></select></div>
+                        <div class="form-group"><label class="form-label" for="request-date">Fecha de Solicitud *</label><input id="request-date" type="date" class="modal-input" /></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Prioridad *</label>
+                        <div class="priority-toggle">
+                            <label class="priority-label"><input type="radio" name="priority" value="Baja"><span>Baja</span></label>
+                            <label class="priority-label active"><input type="radio" name="priority" value="Media" checked><span>Media</span></label>
+                            <label class="priority-label"><input type="radio" name="priority" value="Alta"><span>Alta</span></label>
+                            <label class="priority-label"><input type="radio" name="priority" value="Urgente"><span>Urgente</span></label>
+                        </div>
+                    </div>
+                    <div class="modal-form-grid">
+                        <div class="form-group"><label class="form-label" for="requester-name">Nombre del Solicitante *</label><input id="requester-name" type="text" class="modal-input" placeholder="Ingrese su nombre" /></div>
+                        <div class="form-group"><label class="form-label" for="department">Departamento *</label><input id="department" type="text" class="modal-input" placeholder="Ingrese su departamento" /></div>
+                    </div>
+                    <div class="form-group"><label class="form-label" for="target-audience">Público Objetivo *</label><input id="target-audience" type="text" class="modal-input" placeholder="Describa el público objetivo" /></div>
+                    <div class="form-group"><label class="form-label" for="request-description">Descripción Detallada *</label><textarea id="request-description" class="modal-textarea" placeholder="Proporcione todos los detalles relevantes..."></textarea></div>
+                    <div class="form-group">
+                        <label class="form-label">Archivos Adjuntos</label>
+                        <div class="file-dropzone">
+                            <label for="dropzone-file"><span class="material-symbols-outlined">cloud_upload</span><p><span>Haga clic para subir</span> o arrastre y suelte</p><p class="file-formats">SVG, PNG, JPG o GIF</p><input id="dropzone-file" type="file" /></label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-modal-secondary">Cancelar</button>
+                        <button type="submit" class="btn btn-modal-primary">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+        const applySavedTheme = () => { const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'dark') { body.classList.add('dark-mode'); } };
+        themeToggleBtn.addEventListener('click', () => { body.classList.toggle('dark-mode'); localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light'); });
+        document.addEventListener('DOMContentLoaded', applySavedTheme);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openModalBtn = document.getElementById('open-modal-btn');
+            const modal = document.getElementById('request-modal');
+            if(openModalBtn && modal) {
+                const closeModalBtn = document.getElementById('close-modal-btn');
+                const cancelBtn = modal.querySelector('.btn-modal-secondary');
+                const openModal = () => modal.classList.add('active');
+                const closeModal = () => modal.classList.remove('active');
+                openModalBtn.addEventListener('click', openModal);
+                closeModalBtn.addEventListener('click', closeModal);
+                cancelBtn.addEventListener('click', closeModal);
+                modal.addEventListener('click', (event) => { if (event.target === modal) { closeModal(); } });
+            }
+        });
+    </script>
+</body>
+</html>

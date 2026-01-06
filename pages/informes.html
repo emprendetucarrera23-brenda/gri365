@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRI365 - Informes</title>
+    <link rel="stylesheet" href="./../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body class="project-page reports-page">
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20oscuro.png?updatedAt=1759508923355" alt="Logo Claro" class="logo-light">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20claro.png?updatedAt=1759508923395" alt="Logo Oscuro" class="logo-dark">
+            </div>
+            <nav class="navigation">
+                <a class="nav-link" href="./../index.html"><span class="material-symbols-outlined">dashboard</span><span>Inicio</span></a>
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">list_alt</span><span>FixIT</span></a>
+                <a class="nav-link" href="./../pages/gestion.html"><span class="material-symbols-outlined">add_task</span><span>Gestión de Proyectos</span></a>
+                <a class="nav-link" href="./../pages/marketing.html"><span class="material-symbols-outlined">linked_camera</span><span>CAM</span></a>
+            </nav>
+            <div class="sidebar-footer">
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">logout</span><span>Cerrar Sesión</span></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="project-header">
+                <div class="project-header-main">
+                    <div class="project-logo">
+                        <span class="material-symbols-outlined">add_task</span>
+                        <h2>Gestión de Proyectos</h2>
+                    </div>
+                    <nav class="project-nav">
+                        <a href="./../pages/gestion.html">Dashboard</a>
+                        <a href="./../pages/tareas.html">Tareas</a>
+                        <a href="./../pages/calendario2.html">Calendario</a>
+                        <a href="./../pages/informes.html" class="active">Informes</a>
+                    </nav>
+                </div>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="icon-button" title="Alternar tema">
+                        <span class="material-symbols-outlined sun-icon">light_mode</span>
+                        <span class="material-symbols-outlined moon-icon">dark_mode</span>
+                    </button>
+                    <a href="#" class="icon-button" title="Cerrar Sesión">
+                        <span class="material-symbols-outlined">logout</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="contenedor">
+                <div class="reports-tabs">
+                    <button class="tab-button active" data-tab="key-reports">
+                        <span class="material-symbols-outlined">key_visualizer</span>
+                        <span>Informes Clave</span>
+                    </button>
+                    <button class="tab-button" data-tab="ai-assistant">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                        <span>Asistente IA</span>
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="key-reports">
+                    <div class="reports-content-header">
+                        <div>
+                            <h1 class="reports-title">Informes de Proyectos</h1>
+                            <p class="reports-subtitle">Identifica cuellos de botella y reasigna recursos.</p>
+                        </div>
+                        <button class="btn-primary">
+                            <span class="material-symbols-outlined">tune</span>
+                            <span>Configurar</span>
+                        </button>
+                    </div>
+                    <div class="reports-grid">
+                        <div class="report-card">
+                            <div class="card-header"><h3 class="card-title">Tareas Atrasadas</h3><span class="material-symbols-outlined icon-danger">warning</span></div>
+                            <p class="card-description"><strong class="text-danger">12 tareas</strong> están actualmente atrasadas, afectando 3 proyectos.</p>
+                            <div class="card-footer"><div><span class="meta-label">Impacto</span><span class="meta-value">Alto</span></div><a href="#" class="btn-details">Ver Detalles <span class="material-symbols-outlined">arrow_forward</span></a></div>
+                        </div>
+                        <div class="report-card">
+                            <div class="card-header"><h3 class="card-title">Recursos Subutilizados</h3><span class="material-symbols-outlined icon-info">person_add</span></div>
+                            <p class="card-description"><strong class="text-info">3 miembros</strong> del equipo tienen baja carga de trabajo.</p>
+                            <div class="card-footer"><div><span class="meta-label">Oportunidad</span><span class="meta-value">Optimizar</span></div><a href="#" class="btn-details">Ver Detalles <span class="material-symbols-outlined">arrow_forward</span></a></div>
+                        </div>
+                        <div class="report-card">
+                            <div class="card-header"><h3 class="card-title">Excesos de Presupuesto</h3><span class="material-symbols-outlined icon-orange">account_balance_wallet</span></div>
+                            <p class="card-description"><strong class="text-orange">2 proyectos</strong> han excedido el 10% de su presupuesto.</p>
+                            <div class="card-footer"><div><span class="meta-label">Urgencia</span><span class="meta-value">Media</span></div><a href="#" class="btn-details">Ver Detalles <span class="material-symbols-outlined">arrow_forward</span></a></div>
+                        </div>
+                        <div class="report-card">
+                            <div class="card-header"><h3 class="card-title">Cuellos de Botella</h3><span class="material-symbols-outlined icon-purple">groups</span></div>
+                            <p class="card-description"><strong class="text-purple">Juan Pérez</strong> tiene 5 tareas bloqueadas o pendientes.</p>
+                            <div class="card-footer"><div><span class="meta-label">Prioridad</span><span class="meta-value">Crítica</span></div><a href="#" class="btn-details">Ver Detalles <span class="material-symbols-outlined">arrow_forward</span></a></div>
+                        </div>
+                        <div class="report-card">
+                            <div class="card-header"><h3 class="card-title">Salud de Proyectos</h3><span class="material-symbols-outlined icon-green">data_thresholding</span></div>
+                            <p class="card-description"><strong class="text-green">80%</strong> de los proyectos están en buen estado.</p>
+                            <div class="card-footer"><div><span class="meta-label">Visibilidad</span><span class="meta-value">Completa</span></div><a href="#" class="btn-details">Ver Detalles <span class="material-symbols-outlined">arrow_forward</span></a></div>
+                        </div>
+                        <div class="report-card">
+                            <div class="card-header"><h3 class="card-title">Tareas Completadas</h3><span class="material-symbols-outlined icon-teal">check_circle</span></div>
+                            <p class="card-description"><strong class="text-teal">45 tareas</strong> completadas esta semana (+15%).</p>
+                            <div class="card-footer"><div><span class="meta-label">Rendimiento</span><span class="meta-value">Excelente</span></div><a href="#" class="btn-details">Ver Detalles <span class="material-symbols-outlined">arrow_forward</span></a></div>
+                        </div>
+                    </div>
+                    <nav class="reports-pagination">
+                        <button class="pagination-arrow disabled"><span class="material-symbols-outlined">chevron_left</span></button>
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                        <button class="pagination-arrow"><span class="material-symbols-outlined">chevron_right</span></button>
+                    </nav>
+                </div>
+
+                <div class="tab-content" id="ai-assistant">
+                    <div class="reports-content-header">
+                         <div>
+                            <h1 class="reports-title">Generador de Reportes IA</h1>
+                            <p class="reports-subtitle">Pregunta a la IA sobre el estado de tus proyectos.</p>
+                        </div>
+                    </div>
+                    <div class="ai-chat-container">
+                        <div class="chat-history">
+                            <div class="chat-message ai-message">
+                                <div class="message-icon"><span class="material-symbols-outlined">smart_toy</span></div>
+                                <div class="message-bubble">¡Hola! Soy tu asistente. ¿En qué puedo ayudarte hoy?</div>
+                            </div>
+                            <div class="chat-message user-message">
+                                <div class="message-bubble">Muéstrame los proyectos en riesgo.</div>
+                            </div>
+                        </div>
+                        <div class="chat-input-area">
+                            <input type="text" placeholder="Pregunta a la IA...">
+                            <button class="btn-primary"><span class="material-symbols-outlined">send</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Script de Tema
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const body = document.body;
+
+            const applySavedTheme = () => {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    body.classList.add('dark-mode');
+                }
+            };
+            
+            // Aplicar tema al inicio
+            applySavedTheme();
+
+            themeToggleBtn.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+            });
+
+            // Script para las Pestañas
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const targetTab = button.getAttribute('data-tab');
+                    tabContents.forEach(content => {
+                        if (content.id === targetTab) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

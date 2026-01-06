@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAM - Perfil de Usuario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body class="marketing-page user-page">
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20oscuro.png?updatedAt=1759508923355" alt="Logo Claro" class="logo-light">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20claro.png?updatedAt=1759508923395" alt="Logo Oscuro" class="logo-dark">
+            </div>
+            <nav class="navigation">
+                <a class="nav-link" href="index.html"><span class="material-symbols-outlined">dashboard</span><span>Inicio</span></a>
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">list_alt</span><span>FixIT</span></a>
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">inbox</span><span>Gestión de Proyectos</span></a>
+                <a class="nav-link active" href="marketing.html"><span class="material-symbols-outlined">linked_camera</span><span>CAM</span></a>
+            </nav>
+            <div class="sidebar-footer">
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">logout</span><span>Cerrar Sesión</span></a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <div class="logo">
+                        <div class="logo-icon-wrapper"><span class="material-symbols-outlined">linked_camera</span></div>
+                        <h1>CAM</h1>
+                    </div>
+                    <nav class="main-nav">
+                        <a href="marketing.html" class="nav-link"><span>Tickets</span></a>
+                        <a href="calendar.html" class="nav-link"><span>Calendario</span></a>
+                        <a href="tickets_resueltos.html" class="nav-link"><span>Tickets Resueltos</span></a>
+                        <a href="usuario.html" class="nav-link active"><span class="material-symbols-outlined">person</span><span>Usuario</span></a>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <button class="btn-icon" id="theme-toggle-btn" title="Alternar tema"><span class="material-symbols-outlined sun-icon">light_mode</span><span class="material-symbols-outlined moon-icon">dark_mode</span></button>
+                    <a href="#" class="btn-icon" title="Cerrar Sesión"><span class="material-symbols-outlined">logout</span></a>
+                </div>
+            </header>
+            <div class="content-wrapper">
+                
+                <!-- VISTA 1: PERFIL DE USUARIO (Visible por defecto) -->
+                <div id="profile-view" class="view-section">
+                    <div class="user-profile-container">
+                        <div class="user-profile-card">
+                            <div class="profile-header">
+                                <div class="profile-avatar-wrapper">
+                                    <img class="profile-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLFXLCR-3-f-2k9_3Y-7E_M9Q-s7c8B-u-P-wH3Q-i-wQ=s96-c-rg-br100" alt="Avatar de usuario">
+                                    <button class="avatar-edit-button"><span class="material-symbols-outlined">edit</span></button>
+                                </div>
+                                <div class="profile-info">
+                                    <h2>Jane Smith</h2>
+                                    <p>jane.smith@example.com</p>
+                                </div>
+                                <button id="go-to-request-btn" class="btn btn-primary">Crear Nueva Solicitud</button>
+                            </div>
+                            <div class="form-section">
+                                <h3 class="form-section-title">Información Personal</h3>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="first-name" class="form-label">Nombre</label>
+                                        <input type="text" id="first-name" class="modal-input" value="Jane">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name" class="form-label">Apellido</label>
+                                        <input type="text" id="last-name" class="modal-input" value="Smith">
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label for="email" class="form-label">Correo Electrónico</label>
+                                        <input type="email" id="email" class="modal-input" value="jane.smith@example.com">
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label for="department" class="form-label">Departamento</label>
+                                        <input type="text" id="department" class="modal-input" value="Marketing">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3 class="form-section-title">Preferencias de Notificación</h3>
+                                <div class="notifications-grid">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="task-checkbox" checked>
+                                        <span>Notificarme por correo cuando un ticket es asignado</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="task-checkbox" checked>
+                                        <span>Notificarme por correo cuando un ticket se cierra</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Enviar un resumen diario de mis tickets</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="profile-footer">
+                                <button class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VISTA 2: NUEVA SOLICITUD - PASO 1 (Oculta por defecto) -->
+                <div id="new-request-step1-view" class="view-section hidden">
+                    <div class="request-creator-container">
+                        <h1 class="request-creator-title">Crear Nueva Solicitud</h1>
+                        <div class="request-creator-card">
+                            <div class="progress-stepper">
+                                <div class="step active">
+                                    <div class="step-circle">1</div>
+                                    <div class="step-label">Tipo de Solicitud</div>
+                                </div>
+                                <div class="step-line"></div>
+                                <div class="step">
+                                    <div class="step-circle">2</div>
+                                    <div class="step-label">Detalles</div>
+                                </div>
+                                <div class="step-line"></div>
+                                <div class="step">
+                                    <div class="step-circle">3</div>
+                                    <div class="step-label">Revisar y Enviar</div>
+                                </div>
+                            </div>
+                            <div class="request-type-selection">
+                                <h2>¿Qué tipo de solicitud es esta?</h2>
+                                <p>Elige la categoría que mejor se adapte a tus necesidades.</p>
+                                <div class="request-type-grid">
+                                    <button class="type-card active" data-request-type="video">
+                                        <span class="material-symbols-outlined">videocam</span>
+                                        <p class="type-title">Producción Audiovisual</p>
+                                        <p class="type-description">Videos, fotos, animaciones, etc.</p>
+                                    </button>
+                                    <button class="type-card" data-request-type="campaign">
+                                        <span class="material-symbols-outlined">campaign</span>
+                                        <p class="type-title">Campaña de Marketing</p>
+                                        <p class="type-description">Anuncios, redes sociales, campañas de correo.</p>
+                                    </button>
+                                    <button class="type-card" data-request-type="design">
+                                        <span class="material-symbols-outlined">draw</span>
+                                        <p class="type-title">Diseño Gráfico</p>
+                                        <p class="type-description">Logos, folletos, presentaciones.</p>
+                                    </button>
+                                    <button class="type-card" data-request-type="other">
+                                        <span class="material-symbols-outlined">category</span>
+                                        <p class="type-title">Otro</p>
+                                        <p class="type-description">¿Algo más? Descríbelo más adelante.</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="request-creator-footer">
+                                <button id="back-to-profile-btn" class="btn btn-secondary">Atrás</button>
+                                <button id="next-step-btn" class="btn btn-primary">
+                                    <span>Siguiente Paso</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VISTA 3: NUEVA SOLICITUD - PASO 2 (Oculta por defecto) -->
+                <div id="new-request-step2-view" class="view-section hidden">
+                     <div class="request-creator-container">
+                        <h1 class="request-creator-title">Crear Nueva Solicitud</h1>
+                        <div class="request-creator-card">
+                            <div class="progress-stepper">
+                                <div class="step complete"><div class="step-circle">1</div><div class="step-label">Tipo</div></div>
+                                <div class="step-line"></div>
+                                <div class="step active"><div class="step-circle">2</div><div class="step-label">Detalles</div></div>
+                                <div class="step-line"></div>
+                                <div class="step"><div class="step-circle">3</div><div class="step-label">Revisar y Enviar</div></div>
+                            </div>
+                            <form class="modal-form">
+                                <div class="modal-form-grid">
+                                    <div class="form-group"><label class="form-label" for="request-date">Fecha de Solicitud *</label><input id="request-date" type="date" class="modal-input" /></div>
+                                    <div class="form-group"><label class="form-label" for="requester-name">Nombre del Solicitante *</label><input id="requester-name" type="text" class="modal-input" placeholder="Ingrese su nombre" /></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Prioridad *</label>
+                                    <div class="priority-toggle">
+                                        <label class="priority-label"><input type="radio" name="priority" value="Baja"><span>Baja</span></label>
+                                        <label class="priority-label active"><input type="radio" name="priority" value="Media" checked><span>Media</span></label>
+                                        <label class="priority-label"><input type="radio" name="priority" value="Alta"><span>Alta</span></label>
+                                        <label class="priority-label"><input type="radio" name="priority" value="Urgente"><span>Urgente</span></label>
+                                    </div>
+                                </div>
+                                <div id="conditional-fields">
+                                    <div class="form-section-dynamic hidden" id="video-fields">
+                                        <div class="modal-form-grid">
+                                            <div class="form-group"><label class="form-label">Duración (minutos)</label><input type="number" class="modal-input" placeholder="Ej: 5" /></div>
+                                            <div class="form-group"><label class="form-label">Plataforma</label><input type="text" class="modal-input" placeholder="YouTube, Redes Sociales, etc." /></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-section-dynamic hidden" id="design-fields">
+                                        <div class="form-group"><label class="form-label">Formato de Archivo</label><input type="text" class="modal-input" placeholder="PNG, JPG, SVG, etc." /></div>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label class="form-label">Descripción Detallada *</label><textarea class="modal-textarea" placeholder="Proporcione todos los detalles relevantes..."></textarea></div>
+                                <div class="form-group">
+                                    <label class="form-label">Archivos Adjuntos</label>
+                                    <div class="file-dropzone">
+                                        <label for="dropzone-file"><span class="material-symbols-outlined">cloud_upload</span><p><span>Haga clic para subir</span> o arrastre y suelte</p><p class="file-formats">SVG, PNG, JPG o GIF</p><input id="dropzone-file" type="file" /></label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="request-creator-footer">
+                                <button id="back-to-step1-btn" class="btn btn-secondary">Atrás</button>
+                                <button class="btn btn-primary"><span>Enviar Solicitud</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        // Scripts de Tema
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+        const applySavedTheme = () => { const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'dark') { body.classList.add('dark-mode'); } };
+        themeToggleBtn.addEventListener('click', () => { body.classList.toggle('dark-mode'); localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light'); });
+        document.addEventListener('DOMContentLoaded', applySavedTheme);
+
+        // ===== SCRIPT PARA NAVEGACIÓN ENTRE VISTAS =====
+        document.addEventListener('DOMContentLoaded', () => {
+            const profileView = document.getElementById('profile-view');
+            const step1View = document.getElementById('new-request-step1-view');
+            const step2View = document.getElementById('new-request-step2-view');
+
+            const goToRequestBtn = document.getElementById('go-to-request-btn');
+            const backToProfileBtn = document.getElementById('back-to-profile-btn');
+            const nextStepBtn = document.getElementById('next-step-btn');
+            const backToStep1Btn = document.getElementById('back-to-step1-btn');
+            const typeCards = document.querySelectorAll('.type-card');
+            
+            let selectedType = 'video'; // Default selection
+
+            // Manejar selección de tarjetas de tipo
+            typeCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    typeCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    selectedType = card.getAttribute('data-request-type');
+                });
+            });
+
+            // Ir de Perfil a Paso 1
+            goToRequestBtn.addEventListener('click', () => {
+                profileView.classList.add('hidden');
+                step1View.classList.remove('hidden');
+            });
+
+            // Regresar de Paso 1 a Perfil
+            backToProfileBtn.addEventListener('click', () => {
+                step1View.classList.add('hidden');
+                profileView.classList.remove('hidden');
+            });
+
+            // Ir de Paso 1 a Paso 2
+            nextStepBtn.addEventListener('click', () => {
+                const videoFields = document.getElementById('video-fields');
+                const designFields = document.getElementById('design-fields');
+
+                videoFields.classList.add('hidden');
+                designFields.classList.add('hidden');
+                
+                if (selectedType === 'video') {
+                    videoFields.classList.remove('hidden');
+                } else if (selectedType === 'design') {
+                    designFields.classList.remove('hidden');
+                }
+                
+                step1View.classList.add('hidden');
+                step2View.classList.remove('hidden');
+            });
+
+            // Regresar de Paso 2 a Paso 1
+            backToStep1Btn.addEventListener('click', () => {
+                step2View.classList.add('hidden');
+                step1View.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

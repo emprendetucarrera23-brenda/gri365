@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRI365 - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body class="home-page">
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20oscuro.png?updatedAt=1759508923355" alt="Logo Claro" class="logo-light">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20claro.png?updatedAt=1759508923395" alt="Logo Oscuro" class="logo-dark">
+            </div>
+            <nav class="navigation">
+                <a class="nav-link" href="index.html"><span class="material-symbols-outlined">dashboard</span><span>Inicio</span></a>
+                <a class="nav-link" href="#"><span class="material-symbols-outlined">list_alt</span><span>FixIT</span></a>
+                <a class="nav-link active" href="./pages/gestion.html"><span class="material-symbols-outlined">add_task</span><span>Gestión de Proyectos</span></a>
+                <a class="nav-link" href="./pages/marketing.html"><span class="material-symbols-outlined">linked_camera</span><span>CAM</span></a>
+            </nav>
+            <div class="sidebar-footer">
+                <a class="nav-link" href="#">
+                    <span class="material-symbols-outlined">logout</span>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+        </aside>
+        <main class="main-content">
+             <header class="header">
+                <h2>GRI365</h2>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="open-modal-btn">Nuevo Ticket</button>
+                    <button id="theme-toggle-btn" class="icon-button" title="Alternar tema">
+                        <span class="material-symbols-outlined sun-icon">light_mode</span>
+                        <span class="material-symbols-outlined moon-icon">dark_mode</span>
+                    </button>
+                </div>
+            </header>
+            <div class="landing-main">
+                <div class="welcome-message">
+                    <h1>Bienvenido a GRI365</h1>
+                    <p>Seleccione "Nuevo Ticket" para comenzar.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL -->
+    <div id="new-ticket-modal" class="modal-overlay">
+        <div class="modal-content">
+            <!-- VISTA 1: Selección de Módulo -->
+            <div id="modal-step-1" class="modal-view">
+                <div class="modal-header">
+                    <h2 class="modal-title">Crear Nuevo Ticket</h2>
+                    <button id="close-modal-btn" class="modal-close-btn"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="module-grid">
+                        <a class="module-card" href="#" id="go-to-fixit-form" data-module="fixit">
+                            <div class="module-icon-wrapper"><span class="material-symbols-outlined">settings</span></div>
+                            <div class="module-text"><p class="module-title">FixIT</p><p class="module-description">Módulo para tickets de reparación.</p></div>
+                        </a>
+                        <a class="module-card" href="#" id="go-to-cam-form" data-module="cam">
+                            <div class="module-icon-wrapper"><span class="material-symbols-outlined">linked_camera</span></div>
+                            <div class="module-text"><p class="module-title">CAM</p><p class="module-description">Módulo para solicitudes audiovisuales.</p></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISTA 2: Formulario FixIT -->
+            <div id="modal-fixit-form" class="modal-view hidden">
+                <div class="modal-header">
+                    <h2 class="modal-title">Nuevo Ticket - FixIT</h2>
+                    <button class="back-to-step1-btn modal-close-btn"><span class="material-symbols-outlined">arrow_back</span></button>
+                </div>
+                <div class="modal-body">
+                     <form class="modal-form">
+                        <div class="form-group"><label class="form-label">Asunto</label><input type="text" class="modal-input" placeholder="Ej: Problema con el proyector"></div>
+                        <div class="form-group"><label class="form-label">Descripción del Problema</label><textarea class="modal-textarea" placeholder="Describe el problema en detalle..."></textarea></div>
+                        <div class="request-creator-footer">
+                             <button type="button" class="btn-secondary back-to-step1-btn">Atrás</button>
+                             <button type="submit" class="btn-primary">Enviar Ticket de FixIT</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- VISTA 3: CAM - Paso 1 (Tipo) -->
+            <div id="modal-cam-step1" class="modal-view hidden">
+                <div class="modal-header">
+                    <h2 class="modal-title">Nueva Solicitud - CAM</h2>
+                    <button class="back-to-step1-btn modal-close-btn"><span class="material-symbols-outlined">arrow_back</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="request-creator-card">
+                        <div class="progress-stepper">
+                            <div class="step active"><div class="step-circle">1</div><div class="step-label">Tipo de Solicitud</div></div>
+                            <div class="step-line"></div><div class="step"><div class="step-circle">2</div><div class="step-label">Detalles</div></div>
+                            <div class="step-line"></div><div class="step"><div class="step-circle">3</div><div class="step-label">Revisar</div></div>
+                        </div>
+                        <div class="request-type-selection">
+                            <h2>¿Qué tipo de solicitud es esta?</h2>
+                            <p>Elige la categoría que mejor se adapte.</p>
+                            <div class="request-type-grid">
+                                <button class="type-card active" data-request-type="Producción Audiovisual"><span class="material-symbols-outlined">videocam</span><p class="type-title">Producción Audiovisual</p><p class="type-description">Videos, fotos, animaciones, etc.</p></button>
+                                <button class="type-card" data-request-type="Campaña de Marketing"><span class="material-symbols-outlined">campaign</span><p class="type-title">Campaña de Marketing</p><p class="type-description">Anuncios, redes sociales, campañas de correo.</p></button>
+                                <button class="type-card" data-request-type="Diseño Gráfico"><span class="material-symbols-outlined">draw</span><p class="type-title">Diseño Gráfico</p><p class="type-description">Logos, folletos, presentaciones.</p></button>
+                                <button class="type-card" data-request-type="Otro"><span class="material-symbols-outlined">category</span><p class="type-title">Otro</p><p class="type-description">¿Algo más? Descríbelo más adelante.</p></button>
+                            </div>
+                        </div>
+                        <div class="request-creator-footer">
+                            <button class="btn-primary next-step-btn"><span>Siguiente Paso</span><span class="material-symbols-outlined">arrow_forward</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISTA 4: CAM - Paso 2 (Detalles) -->
+            <div id="modal-cam-step2" class="modal-view hidden">
+                <div class="modal-header">
+                    <h2 class="modal-title">Nueva Solicitud - CAM</h2>
+                    <button class="back-to-cam-step1-btn modal-close-btn"><span class="material-symbols-outlined">arrow_back</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="request-creator-card">
+                        <div class="progress-stepper">
+                            <div class="step complete"><div class="step-circle">1</div></div><div class="step-line"></div>
+                            <div class="step active"><div class="step-circle">2</div><div class="step-label">Detalles</div></div>
+                            <div class="step-line"></div><div class="step"><div class="step-circle">3</div></div>
+                        </div>
+                        <form class="modal-form" id="cam-details-form">
+                            <div class="modal-form-grid">
+                                <div class="form-group"><label class="form-label" for="cam-date">Fecha de Solicitud *</label><input id="cam-date" name="Fecha de Solicitud" type="date" class="modal-input" required /></div>
+                                <div class="form-group">
+                                    <label class="form-label">Prioridad *</label>
+                                    <div class="priority-toggle">
+                                        <label class="priority-label"><input type="radio" name="Prioridad" value="Baja">Baja</label>
+                                        <label class="priority-label active"><input type="radio" name="Prioridad" value="Media" checked>Media</label>
+                                        <label class="priority-label"><input type="radio" name="Prioridad" value="Alta">Alta</label>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label class="form-label" for="cam-requester">Nombre del Solicitante *</label><input id="cam-requester" name="Solicitante" type="text" class="modal-input" required /></div>
+                                <div class="form-group"><label class="form-label" for="cam-department">Departamento *</label><input id="cam-department" name="Departamento" type="text" class="modal-input" required /></div>
+                            </div>
+                            <div class="form-group"><label class="form-label" for="cam-audience">Público Objetivo *</label><input id="cam-audience" name="Público Objetivo" type="text" class="modal-input" required /></div>
+                            <div class="form-group"><label class="form-label" for="cam-description">Descripción Detallada *</label><textarea id="cam-description" name="Descripción" class="modal-textarea" required></textarea></div>
+                            <div class="form-group"><label class="form-label" for="cam-comments">Comentario de Cierre / Observaciones</label><textarea id="cam-comments" name="Observaciones" class="modal-textarea"></textarea></div>
+                            <div class="form-group"><label class="form-label" for="cam-url">URL del Entregable Final</label><input id="cam-url" name="URL Entregable" type="url" class="modal-input" /></div>
+                        </form>
+                        <div class="request-creator-footer">
+                            <button class="back-to-cam-step1-btn btn-secondary">Atrás</button>
+                            <button class="next-step-btn btn-primary"><span>Siguiente Paso</span><span class="material-symbols-outlined">arrow_forward</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISTA 5: CAM - Paso 3 (Revisar) -->
+            <div id="modal-cam-step3" class="modal-view hidden">
+                 <div class="modal-header">
+                    <h2 class="modal-title">Revisar Solicitud - CAM</h2>
+                    <button class="back-to-cam-step2-btn modal-close-btn"><span class="material-symbols-outlined">arrow_back</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="request-creator-card">
+                         <div class="progress-stepper">
+                            <div class="step complete"><div class="step-circle">1</div></div><div class="step-line"></div>
+                            <div class="step complete"><div class="step-circle">2</div></div><div class="step-line"></div>
+                            <div class="step active"><div class="step-circle">3</div><div class="step-label">Revisar</div></div>
+                        </div>
+                        <div class="review-section">
+                            <h2>Confirma los detalles de tu solicitud</h2>
+                            <div class="review-details-grid" id="review-details">
+                                <!-- Contenido generado por JS -->
+                            </div>
+                        </div>
+                        <div class="request-creator-footer">
+                            <button class="back-to-cam-step2-btn btn-secondary">Atrás</button>
+                            <button class="btn-primary" id="send-request">Enviar Solicitud</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast-overlay">
+        <div class="toast-message">
+            <button class="close-toast"><span class="material-symbols-outlined">close</span></button>
+            <div class="icon"><span class="material-symbols-outlined">check_circle</span></div>
+            <h3>Solicitud enviada con éxito</h3>
+            <p>Tu solicitud ha sido registrada correctamente.</p>
+        </div>
+    </div>
+
+    <script>
+        // Script de Tema
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+        const applySavedTheme = () => { const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'dark') { body.classList.add('dark-mode'); } };
+        themeToggleBtn.addEventListener('click', () => { body.classList.toggle('dark-mode'); localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light'); });
+        document.addEventListener('DOMContentLoaded', applySavedTheme);
+
+        // Script del Modal
+        document.addEventListener('DOMContentLoaded', () => {
+            const openModalBtn = document.getElementById('open-modal-btn');
+            const modal = document.getElementById('new-ticket-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            
+            const step1 = document.getElementById('modal-step-1');
+            const stepFixit = document.getElementById('modal-fixit-form');
+            const camStep1 = document.getElementById('modal-cam-step1');
+            const camStep2 = document.getElementById('modal-cam-step2');
+            const camStep3 = document.getElementById('modal-cam-step3');
+            const allSteps = [step1, stepFixit, camStep1, camStep2, camStep3];
+            
+            const goToFixitBtn = document.getElementById('go-to-fixit-form');
+            const goToCamBtn = document.getElementById('go-to-cam-form');
+            const backToStep1Btns = document.querySelectorAll('.back-to-step1-btn');
+            
+            const nextBtnFromCam1 = camStep1.querySelector('.next-step-btn');
+            const backBtnFromCam2 = camStep2.querySelector('.back-to-cam-step1-btn');
+            const nextBtnFromCam2 = camStep2.querySelector('.next-step-btn');
+            const backBtnFromCam3 = camStep3.querySelector('.back-to-cam-step2-btn');
+            
+            const sendBtn = document.getElementById('send-request');
+            const toast = document.getElementById("toast");
+            const closeToast = document.querySelector(".close-toast");
+
+            let selectedCamType = 'Producción Audiovisual';
+            const typeCards = camStep1.querySelectorAll('.type-card');
+            
+            const hideAllSteps = () => allSteps.forEach(step => step.classList.add('hidden'));
+
+            const openModal = () => modal.classList.add('active');
+            const closeModal = () => {
+                modal.classList.remove('active');
+                setTimeout(() => { hideAllSteps(); step1.classList.remove('hidden'); }, 300);
+            };
+
+            openModalBtn.addEventListener('click', openModal);
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (event) => { if (event.target === modal) { closeModal(); } });
+            
+            goToFixitBtn.addEventListener('click', (e) => { e.preventDefault(); hideAllSteps(); stepFixit.classList.remove('hidden'); });
+            goToCamBtn.addEventListener('click', (e) => { e.preventDefault(); hideAllSteps(); camStep1.classList.remove('hidden'); });
+
+            backToStep1Btns.forEach(btn => {
+                btn.addEventListener('click', () => { hideAllSteps(); step1.classList.remove('hidden'); });
+            });
+
+            typeCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    typeCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    selectedCamType = card.getAttribute('data-request-type');
+                });
+            });
+
+            nextBtnFromCam1.addEventListener('click', () => {
+                hideAllSteps();
+                camStep2.classList.remove('hidden');
+            });
+
+            backBtnFromCam2.addEventListener('click', () => { hideAllSteps(); camStep1.classList.remove('hidden'); });
+            
+            nextBtnFromCam2.addEventListener('click', () => {
+                const form = document.getElementById('cam-details-form');
+                const reviewDetails = document.getElementById('review-details');
+                const formData = new FormData(form);
+                let reviewHTML = `<p class="detail-label">Tipo de Solicitud:</p><p>${selectedCamType}</p>`;
+
+                for (let [key, value] of formData.entries()) {
+                    if (value) {
+                         if (key === 'Prioridad') {
+                            const checkedRadio = form.querySelector('input[name="Prioridad"]:checked');
+                            value = checkedRadio ? checkedRadio.value : 'No especificada';
+                        }
+                        reviewHTML += `<p class="detail-label">${key}:</p><p>${value}</p>`;
+                    }
+                }
+                reviewDetails.innerHTML = reviewHTML;
+
+                hideAllSteps();
+                camStep3.classList.remove('hidden');
+            });
+
+            backBtnFromCam3.addEventListener('click', () => { hideAllSteps(); camStep2.classList.remove('hidden'); });
+            
+            sendBtn.onclick = () => {
+                closeModal();
+                toast.style.display = "flex";
+            };
+
+            closeToast.onclick = () => {
+                toast.querySelector(".toast-message").style.animation = "fadeOut 0.4s forwards";
+                setTimeout(() => { 
+                    toast.style.display = "none";
+                    toast.querySelector(".toast-message").style.animation = "fadeIn 0.4s forwards";
+                }, 400);
+            };
+        });
+    </script>
+</body>
+</html>

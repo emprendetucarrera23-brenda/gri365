@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAM - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="./../styles.css" rel="stylesheet" /> 
+</head>
+<body class="marketing-page">
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20oscuro.png?updatedAt=1759508923355" alt="Logo Claro" class="logo-light">
+                <img src="https://ik.imagekit.io/v3kitfabd/gri365/solo%20ojo%20claro.png?updatedAt=1759508923395" alt="Logo Oscuro" class="logo-dark">
+            </div>
+            <nav class="navigation">
+                <a class="nav-link" href="./../index.html">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span>Inicio</span>
+                </a>
+                <a class="nav-link" href="#">
+                    <span class="material-symbols-outlined">list_alt</span>
+                    <span>FixIT</span>
+                </a>
+                <a class="nav-link" href="./../pages/gestion.html">
+                    <span class="material-symbols-outlined">inbox</span>
+                    <span>Gestión de Proyectos</span>
+                </a>
+                <a class="nav-link active" href="./../pages/marketing.html">
+                    <span class="material-symbols-outlined">linked_camera</span>
+                    <span>CAM</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a class="nav-link" href="#">
+                    <span class="material-symbols-outlined">logout</span>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <div class="logo">
+                        <div class="logo-icon-wrapper">
+                            <span class="material-symbols-outlined">linked_camera</span>
+                        </div>
+                        <h1>CAM</h1>
+                    </div>
+                    <nav class="main-nav">
+                        <a href="marketing.html" class="nav-link active">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            <span>Tickets</span>
+                        </a>
+                        <a href="./../pages/calendario.html" class="nav-link">
+                            <span class="material-symbols-outlined">calendar_today</span>
+                            <span>Calendario</span>
+                        </a>
+                        <a href="./../pages/tickets_resueltos.html" class="nav-link">
+                            <span class="material-symbols-outlined">bar_chart</span>
+                            <span>Tickets Resueltos</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <button class="btn-icon" id="theme-toggle-btn" title="Alternar tema">
+                        <span class="material-symbols-outlined sun-icon">light_mode</span>
+                        <span class="material-symbols-outlined moon-icon">dark_mode</span>
+                    </button>
+                    <a href="#" class="btn-icon" title="Cerrar Sesión">
+                        <span class="material-symbols-outlined">logout</span>
+                    </a>
+                </div>
+            </header>
+            <div class="dashboard-grid">
+                <div class="ticket-list-column">
+                    <div class="content-header">
+                        <h2>Todas las Solicitudes</h2>
+                        <div class="filter-buttons">
+                            <button class="btn btn-filter"><span>Fecha</span><span class="material-symbols-outlined">expand_more</span></button>
+                            <button class="btn btn-filter"><span>Prioridad</span><span class="material-symbols-outlined">expand_more</span></button>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card"><div class="card-header"><p>En curso</p><span class="material-symbols-outlined icon-warning">hourglass_top</span></div><p class="stat-number">2</p></div>
+                        <div class="stat-card"><div class="card-header"><p>En revisión</p><span class="material-symbols-outlined icon-info">rate_review</span></div><p class="stat-number">1</p></div>
+                        <div class="stat-card"><div class="card-header"><p>Finalizado</p><span class="material-symbols-outlined icon-success">check_circle</span></div><p class="stat-number">1</p></div>
+                        <div class="stat-card"><div class="card-header"><p>Pendiente</p><span class="material-symbols-outlined icon-secondary">pending_actions</span></div><p class="stat-number">1</p></div>
+                    </div>
+                    <div class="table-container">
+                        <table class="requests-table">
+                            <thead>
+                                <tr><th>Título de la Solicitud</th><th>Prioridad</th><th>Estado</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active-row"><td>Campaña de Lanzamiento de Producto</td><td><span class="badge badge-high">Alta</span></td><td><span class="badge badge-progress">En curso</span></td></tr>
+                                <tr><td>Gráficos para Redes Sociales</td><td><span class="badge badge-medium">Media</span></td><td><span class="badge badge-finished">Finalizado</span></td></tr>
+                                <tr><td>Nuevo Banner para Sitio Web</td><td><span class="badge badge-high">Alta</span></td><td><span class="badge badge-review">En revisión</span></td></tr>
+                                <tr><td>Video Resumen Q4</td><td><span class="badge badge-low">Baja</span></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+                                <tr><td>Diseño de Stand para Conferencia</td><td><span class="badge badge-medium">Media</span></td><td><span class="badge badge-progress">En curso</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="ticket-view-column">
+                    <div class="ticket-detail-header">
+                        <div class="ticket-title-group">
+                            <h2>Ticket #MKT-12345</h2>
+                            <div class="ticket-status">
+                                <p>Estado:</p>
+                                <span class="badge badge-progress">En Progreso</span>
+                            </div>
+                        </div>
+                        <div class="ticket-detail-actions">
+                            <button class="btn btn-secondary">Editar Ticket</button>
+                            <button class="btn btn-secondary">Asignar Usuario</button>
+                            <button class="btn btn-primary">Cerrar Ticket</button>
+                        </div>
+                    </div>
+                    <div class="ticket-meta-info">
+                        <div class="meta-item">
+                            <span class="material-symbols-outlined">calendar_month</span>
+                            <p>Fecha de Solicitud:</p>
+                            <strong>2023-10-26</strong>
+                        </div>
+                        <div class="meta-item">
+                            <span class="material-symbols-outlined">priority_high</span>
+                            <p>Prioridad:</p>
+                            <span class="badge badge-high">Alta</span>
+                        </div>
+                    </div>
+                    <div class="ticket-detail-content">
+                        <div class="ticket-detail-card">
+                            <h3>Detalles del Ticket</h3>
+                            <div class="details-grid">
+                                <p class="detail-label">Solicitante:</p><p>John Doe</p>
+                                <p class="detail-label">Departamento:</p><p>Marketing</p>
+                                <p class="detail-label">Tipo de Material:</p><p>Video</p>
+                                <p class="detail-label">Público Objetivo:</p><p>Todos los públicos</p>
+                                <p class="detail-label full-width">Descripción Detallada:</p>
+                                <p class="detail-description full-width">
+                                    Aquí se mostraría una descripción detallada de la solicitud, proporcionando toda la información necesaria para que el equipo comprenda el alcance y los requisitos de la tarea. Esto incluye detalles sobre el propósito del video, mensajes clave, tono deseado y cualquier inclusión obligatoria como logotipos o elementos de marca.
+                                </p>
+                            </div>
+                            <hr>
+                            <h3>Estado y Cierre</h3>
+                            <div class="status-section">
+                                <div class="form-group">
+                                    <label class="form-label" for="status">Estado de la Solicitud</label>
+                                    <select id="status" class="modal-input">
+                                        <option>Nuevo</option>
+                                        <option selected>En Progreso</option>
+                                        <option>Pendiente de Aprobación</option>
+                                        <option>Cerrado</option>
+                                    </select>
+                                </div>
+                                <div class="details-grid">
+                                    <p class="detail-label">Asignado a:</p>
+                                    <div class="user-chip">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLFXLCR-3-f-2k9_3Y-7E_M9Q-s7c8B-u-P-wH3Q-i-wQ=s96-c-rg-br100" alt="Avatar de usuario asignado">
+                                        <p>Jane Smith</p>
+                                    </div>
+                                    <p class="detail-label">Fecha de Cierre:</p><p>-</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="close-comment">Comentario de Cierre</label>
+                                    <textarea id="close-comment" class="modal-textarea" placeholder="Aún no hay comentarios..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <p class="form-label">URL de Entregable Final</p>
+                                    <a href="#" class="link">https://deliverables.co/final-video-v1.mp4</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket-detail-card">
+                            <h3>Historial de Cambios</h3>
+                            <ul class="history-list">
+                                <li class="history-item">
+                                    <div class="history-icon"><span class="material-symbols-outlined">history</span></div>
+                                    <div>
+                                        <p><span class="font-semibold">Jane Smith</span> cambió el estado de <span class="font-semibold">Nuevo</span> a <span class="font-semibold">En Progreso</span>.</p>
+                                        <p class="history-date">2023-10-27 09:15 AM</p>
+                                    </div>
+                                </li>
+                                <li class="history-item">
+                                    <div class="history-icon"><span class="material-symbols-outlined">assignment_ind</span></div>
+                                    <div>
+                                        <p><span class="font-semibold">Admin</span> asignó el ticket a <span class="font-semibold">Jane Smith</span>.</p>
+                                        <p class="history-date">2023-10-27 09:14 AM</p>
+                                    </div>
+                                </li>
+                                <li class="history-item">
+                                    <div class="history-icon"><span class="material-symbols-outlined">add</span></div>
+                                    <div>
+                                        <p><span class="font-semibold">John Doe</span> creó el ticket.</p>
+                                        <p class="history-date">2023-10-26 03:30 PM</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="request-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Nueva Solicitud de Marketing y Comunicación</h2>
+                <button id="close-modal-btn" class="modal-close-btn"><span class="material-symbols-outlined">close</span></button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form">
+                    <div class="modal-form-grid">
+                        <div class="form-group"><label class="form-label" for="material-type">Tipo de Material *</label><select id="material-type" class="modal-input"><option value="video">Video</option><option value="post">Post</option><option value="fotografia">Fotografía</option><option value="asesoria">Asesoría</option><option value="licitacion">Licitación</option><option value="otro">Otro</option></select></div>
+                        <div class="form-group"><label class="form-label" for="request-date">Fecha de Solicitud *</label><input id="request-date" type="date" class="modal-input" /></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Prioridad *</label>
+                        <div class="priority-toggle">
+                            <label class="priority-label"><input type="radio" name="priority" value="Baja"><span>Baja</span></label>
+                            <label class="priority-label active"><input type="radio" name="priority" value="Media" checked><span>Media</span></label>
+                            <label class="priority-label"><input type="radio" name="priority" value="Alta"><span>Alta</span></label>
+                            <label class="priority-label"><input type="radio" name="priority" value="Urgente"><span>Urgente</span></label>
+                        </div>
+                    </div>
+                    <div class="modal-form-grid">
+                        <div class="form-group"><label class="form-label" for="requester-name">Nombre del Solicitante *</label><input id="requester-name" type="text" class="modal-input" placeholder="Ingrese su nombre" /></div>
+                        <div class="form-group"><label class="form-label" for="department">Departamento *</label><input id="department" type="text" class="modal-input" placeholder="Ingrese su departamento" /></div>
+                    </div>
+                    <div class="form-group"><label class="form-label" for="target-audience">Público Objetivo *</label><input id="target-audience" type="text" class="modal-input" placeholder="Describa el público objetivo" /></div>
+                    <div class="form-group"><label class="form-label" for="request-description">Descripción Detallada *</label><textarea id="request-description" class="modal-textarea" placeholder="Proporcione todos los detalles relevantes..."></textarea></div>
+                    <div class="form-group">
+                        <label class="form-label">Archivos Adjuntos</label>
+                        <div class="file-dropzone">
+                            <label for="dropzone-file"><span class="material-symbols-outlined">cloud_upload</span><p><span>Haga clic para subir</span> o arrastre y suelte</p><p class="file-formats">SVG, PNG, JPG o GIF</p><input id="dropzone-file" type="file" /></label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-modal-secondary">Cancelar</button>
+                        <button type="submit" class="btn btn-modal-primary">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="info-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Para tener en cuenta 💡</h2>
+                <button id="close-info-modal-btn" class="modal-close-btn"><span class="material-symbols-outlined">close</span></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Tiempos de Entrega Estimados:</strong></p>
+                <ul>
+                    <li>2 días por post</li>
+                    <li>3 días por video</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Importante:</strong> Después de crear el ticket, acérquese al equipo CAM para coordinar.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="understand-info-modal-btn" type="button" class="btn btn-modal-primary">Entendido</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+
+        const applySavedTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        };
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            applySavedTheme();
+
+            // Lógica para el modal que se muestra CADA VEZ que se entra a CAM
+            const infoModal = document.getElementById('info-modal');
+            const closeInfoBtn = document.getElementById('close-info-modal-btn');
+            const understandInfoBtn = document.getElementById('understand-info-modal-btn');
+
+            // Muestra el modal inmediatamente al cargar la página
+            infoModal.style.display = 'flex'; 
+
+            // Función para cerrar el modal
+            const closeModal = () => {
+                infoModal.style.display = 'none';
+            };
+
+            // Event listeners para cerrar el modal
+            closeInfoBtn.addEventListener('click', closeModal);
+            understandInfoBtn.addEventListener('click', closeModal);
+
+            // Cerrar si se hace click fuera del contenido del modal
+            infoModal.addEventListener('click', (e) => {
+                if (e.target === infoModal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
